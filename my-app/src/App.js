@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Popup from './Popup';
 
 function App() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleStartClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="message-box">
+        졸업을 축하해
+      </div>
+      <button className="start-button" onClick={handleStartClick}>start</button>
+
+      {showPopup && <Popup onClose={handleClosePopup} />}
     </div>
   );
 }
