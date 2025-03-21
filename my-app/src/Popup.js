@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Popup.css';
 
 const images = [
-  { src: "https://drive.google.com/uc?export=view&id=12Px1OZUYFEdJPZqS_HXrPFGv5Yyo9vIM", title: "첫 번째", description: "설명1", category: "together" },
+  { src: "https://github.com/so34so/react_Project/blob/main/exec/20240922_195203.jpg?raw=true", title: "첫 번째", description: "설명1", category: "together" },
   { src: "image2.jpg", title: "두 번째", description: "설명2", category: "solo" },
   { src: "image3.jpg", title: "세 번째", description: "설명3", category: "together" },
   { src: "image4.jpg", title: "네 번째", description: "설명4", category: "solo" },
