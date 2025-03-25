@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
-import Popup from './Popup';
+import Gallery from './Gallery';
 
 function App() {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showGallery, setShowGallery] = useState(false);
 
   const handleStartClick = () => {
-    setShowPopup(true);
+    setShowGallery(true);
   };
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
+  const handleCloseGallery = () => {
+    setShowGallery(false);
   };
 
   return (
@@ -20,7 +20,7 @@ function App() {
       </div>
       <button className="start-button" onClick={handleStartClick}>start</button>
 
-      {showPopup && <Popup onClose={handleClosePopup} />}
+      {showGallery && <Gallery onClose={handleCloseGallery} />}
     </div>
   );
 }
